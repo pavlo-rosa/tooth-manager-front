@@ -1,0 +1,9 @@
+// export const AUTH = '/auth';
+// export const CHAIN = '/chain';
+// export const CHAIN_ID = '/chain/:id';
+// export const PAIR = '/pair';
+// export const PAIR_ID = '/pair/:id';
+// export const LIST = '/list';
+// export const LIST_ID = '/list/:id';
+export const HOME = '/';
+export const PACIENT_PROFILE = '/pacient';
