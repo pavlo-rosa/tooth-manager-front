@@ -6,4 +6,4 @@
 // export const LIST = '/list';
 // export const LIST_ID = '/list/:id';
 export const HOME = '/';
-export const PACIENT_PROFILE = '/pacient';
+export const PACIENT_PROFILE = '/pacient/:id';

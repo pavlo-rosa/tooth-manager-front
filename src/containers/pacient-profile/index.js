@@ -1,5 +1,5 @@
 import React from "react";
-import { getPacients } from "../../api/pacient";
+import { getPacient } from "../../api/pacient";
 
 class PacientProfile extends React.Component {
   constructor() {
@@ -8,21 +8,18 @@ class PacientProfile extends React.Component {
   }
 
   async componentDidMount() {
-    const response = await getPacients();
+    const {
+      match: { params },
+    } = this.props;
+    const response = await getPacient(params.id);
     this.setState({ data: response });
   }
 
   render() {
     return (
       <div>
-        <h1>TEST</h1>
-        {this.state.data.map((pacient) => {
-          return (
-            <p key={pacient.id}>
-              {pacient.id} - {pacient.name}
-            </p>
-          );
-        })}
+        <h1>Pacient</h1>
+        {this.state.data.id} - {this.state.data.name}
       </div>
     );
   }

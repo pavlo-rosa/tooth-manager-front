@@ -3,7 +3,7 @@ import axios from "axios";
 
 import config from "../config/config";
 
-const pacientUrl = `${config.serverUrl}/pacients`;
+const pacientUrl = `${config.serverUrl}/pacient`;
 
 export async function getPacients() {
   try {
@@ -15,9 +15,23 @@ export async function getPacients() {
   }
 }
 
-export async function getPacient() {
+export async function getPacient(pacientId) {
   try {
-    const { data } = await axios.get(`${pacientUrl}`);
+    const { data } = await axios.get(`${pacientUrl}/${pacientId}`);
+    return data;
+  } catch (err) {
+    const { message } = err;
+    throw new Error(message);
+  }
+}
+
+export async function getPacientsByNameSurName(value) {
+  try {
+    const params = {
+      text: value,
+    };
+
+    const { data } = await axios.get(`${pacientUrl}/search`, { params });
     return data;
   } catch (err) {
     const { message } = err;
