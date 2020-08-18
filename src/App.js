@@ -1,10 +1,10 @@
 import React, { Component } from "react"
 import "./App.css"
-import Routes from "./routes"
+import Sidebar from "./containers/sidebar"
 
 class App extends Component {
   render() {
-    return <Routes />
+    return <Sidebar />
   }
 }
 

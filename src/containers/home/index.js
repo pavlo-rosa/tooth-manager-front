@@ -3,6 +3,7 @@ import logo from "../../logo.svg";
 import { Input, Divider, Table } from "antd";
 import "antd/dist/antd.css";
 import { getPacientsByNameSurName } from "../../api/pacient";
+import "./styles.scss";
 
 const { Search } = Input;
 
@@ -53,7 +54,7 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App" >
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" style={{ width: 300 }} />
           <Search
