@@ -1,4 +1,4 @@
-@import "~antd/lib/style/themes/default.less";
+//@import "~antd/lib/style/themes/default.less";
 
 .labelTitle {
   //color: @primary-color;
@@ -11,6 +11,9 @@
 
 .background-red {
   background-color: red;
+}
+.background-blue {
+  background-color: blue;
 }
 
 
